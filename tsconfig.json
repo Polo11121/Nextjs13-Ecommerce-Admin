@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/billboards/*": [
+        "./src/app/(dashboard)/[storeId]/(routes)/billboards/*"
+      ],
+      "@/categories/*": [
+        "./src/app/(dashboard)/[storeId]/(routes)/categories/*"
+      ],
+      "@/sizes/*": ["./src/app/(dashboard)/[storeId]/(routes)/sizes/*"],
+      "@/colors/*": ["./src/app/(dashboard)/[storeId]/(routes)/colors/*"],
+      "@/orders/*": ["./src/app/(dashboard)/[storeId]/(routes)/orders/*"],
+      "@/products/*": ["./src/app/(dashboard)/[storeId]/(routes)/products/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
