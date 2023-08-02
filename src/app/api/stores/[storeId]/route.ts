@@ -41,7 +41,7 @@ export const PATCH = async (
 
 export const DELETE = async (
   _req: Request,
-  { params: { storeId } }: Params
+  { params: { storeId } }: StoreIdParams
 ) => {
   try {
     const { userId } = auth();

@@ -52,7 +52,10 @@ export const POST = async (
   }
 };
 
-export const GET = async (_req: Request, { params: { storeId } }: Params) => {
+export const GET = async (
+  _req: Request,
+  { params: { storeId } }: StoreIdParams
+) => {
   try {
     if (!storeId) {
       return new NextResponse("Store Id is required", { status: 400 });

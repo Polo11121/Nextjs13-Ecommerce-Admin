@@ -22,6 +22,9 @@ export const GET = async (
       where: {
         id: categoryId,
       },
+      include: {
+        billboard: true,
+      },
     });
 
     return NextResponse.json(category, { status: 200 });

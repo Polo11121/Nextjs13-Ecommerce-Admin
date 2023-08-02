@@ -87,7 +87,10 @@ export const POST = async (
   }
 };
 
-export const GET = async (_req: Request, { params: { storeId } }: Params) => {
+export const GET = async (
+  _req: Request,
+  { params: { storeId } }: StoreIdParams
+) => {
   try {
     const { searchParams } = new URL(_req.url);
     const categoryId = searchParams.get("categoryId") || undefined;
